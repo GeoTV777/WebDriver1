@@ -30,7 +30,7 @@ public class WebDriverDz {
 //       открыть Chrome в headless режиме headless
         options.addArguments("--headless");
         driver = new ChromeDriver(options);
-
+        logger.info("Открытие браузера в режиме headless");
     }
 
     @BeforeEach
@@ -40,6 +40,7 @@ public class WebDriverDz {
         //открыть Chrome в режиме киоска
         options.addArguments("--enable-hardwere-averlays");
         driver = new ChromeDriver(options);
+        logger.info("Открытие браузера в режиме киоска");
     }
 
     @BeforeEach
@@ -50,7 +51,7 @@ public class WebDriverDz {
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.manage().window().maximize();
-        logger.info("Открытие браузера");
+        logger.info("Открытие браузера в режиме полного окна");
     }
 
     @AfterEach
