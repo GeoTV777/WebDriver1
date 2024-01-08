@@ -11,17 +11,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
 import java.time.Duration;
 
 public class WebDriverDz {
-//    static Logger logger = (Logger) LogManager.getLogger(FirstTest.class);
+    static Logger logger = (Logger) LogManager.getLogger("WebDriverDZ");
     WebDriver driver;
 
     @BeforeAll
     public static void driverSetup() {
         WebDriverManager.chromedriver().setup();
-//        logger.info("Установка драйвера");
+        logger.info("Установка драйвера");
     }
 
     @BeforeEach
@@ -51,13 +50,13 @@ public class WebDriverDz {
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.manage().window().maximize();
-//        logger.info(" ");
+        logger.info("Открытие браузера");
     }
 
     @AfterEach
     public void driverStop() {
         if (driver != null) {
-//           logger.info("Закрытие браузера");
+           logger.info("Закрытие браузера");
             driver.close();
             driver.quit();
         }
@@ -105,6 +104,7 @@ public class WebDriverDz {
 //      pass: tvGEO777#777
         autorization();
 //        Вывести в лог все cookie
+        System.out.println(driver.manage().getCookies());
 //
     }
 
