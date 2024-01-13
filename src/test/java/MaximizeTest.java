@@ -51,9 +51,6 @@ public class MaximizeTest extends WebDriverDz {
 //     Нажимаем кнопку Войти
        elEnter = driver.findElement(By.xpath("//button[./*[text()='Войти']]"));
        elEnter.click();
-       try {
-       } catch (Exception ignored) {
-       }
    }
 }
 

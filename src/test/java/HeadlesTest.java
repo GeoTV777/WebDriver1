@@ -31,7 +31,6 @@ public class HeadlesTest extends WebDriverDz {
 //      В открывшемся окне проверяем, что в поисковой выдаче первый результат
 //      Онлайн‑курсы для профессионалов,дистанционное обучение
 
-         driver.get("https://duckduckgo.com/?t=h_&q=%D0%BE%D1%82%D1%83%D1%81&ia=web/");
          WebElement elResult = driver.findElement(By.xpath("//span[contains(text(),'Онлайн‑курсы для профессионалов, дистанционное обучение современным ...')]"));
          Assertions.assertTrue(elResult.getText().contains("Онлайн‑курсы для профессионалов, дистанционное обучение"),
                     "В поисковой выдаче нет данного текста");
