@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.WebElement;
 
-public class KioskTest  extends WebDriverDz{
+public class FullscreenTest extends WebDriverDz{
     @BeforeEach
     public void driverInstallFoKiosk(){
         ChromeOptions options = new ChromeOptions();
@@ -19,7 +19,7 @@ public class KioskTest  extends WebDriverDz{
     public void openFullscreen() {
 //      Переходим на сайт:
         driver.get("https://p.w3layouts.com/demos_new/template_demo/03-10-2020/photoflash-liberty-demo_Free/685659620/web/index.html?_ga=2.181802926.889871791.1632394818-2083132868.1632394818");
-//      Кликаем картинку КАРТИНКА НЕ ТА!!! ВЫБРАТЬ ДРУГОЙ ЛОКАТОР!!
+//      Кликаем картинку
         WebElement elPicture = driver.findElement(By.xpath("//h3[text()='This is a title']"));
         elPicture.click();
 //      Проверяем открытие картинки в модальном окне
