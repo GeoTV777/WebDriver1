@@ -63,13 +63,13 @@ public class MaximizeTest {
         elFocus.click();
 //     Вводим email в поле Электронная почта
         WebElement elEmail = driver.findElement(By.xpath("//input[@name]"));
-        elEmail.sendKeys("tvgeo777@gmail.com");
+        elEmail.sendKeys("login");
 //     На странице регистрации находим и кликаем поле Пароль
         elFocus = driver.findElement(By.xpath("//input[@type='password']/.."));
         elFocus.click();
 //     Вводим пароль в поле Пароль
         WebElement elPassword = driver.findElement(By.xpath("//input[@type='password']"));
-        elPassword.sendKeys("tvGEO777#777");
+        elPassword.sendKeys("pasword");
 //     Нажимаем кнопку Войти
         elEnter = driver.findElement(By.xpath("//button[./*[text()='Войти']]"));
         elEnter.click();
