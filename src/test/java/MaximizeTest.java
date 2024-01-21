@@ -14,7 +14,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.time.Duration;
 
 public class MaximizeTest {
-    static Logger logger = (Logger) LogManager.getLogger("WebDriverDZ");
+    private static Logger logger = (Logger) LogManager.getLogger("WebDriverDZ");
 
     private WebDriver driver;
 
@@ -30,7 +30,7 @@ public class MaximizeTest {
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.manage().window().maximize();
-        logger.info("Открытие браузера в режиме полного окна");
+        logger.info("Открытие браузера в режиме maximize");
     }
 
     @AfterEach
@@ -45,10 +45,8 @@ public class MaximizeTest {
     public void openMaximaze() {
 //     Открыть Chrome в режиме полного экрана
 //     Перейти на https://otus.ru
-        driver.get("https://otus.ru");
+       driver.get("https://otus.ru");
 //     Авторизоваться под каким-нибудь тестовым пользователем(можно создать нового)
-//     log:tvgeo777@gmail.com
-//     pass: tvGEO777#777
         autorization();
 //     Вывести в лог все cookie
         System.out.println("Это куки: " + driver.manage().getCookies());

@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 public class HeadlessTest {
-    static Logger logger = (Logger) LogManager.getLogger("WebDriverDZ");
+   private static Logger logger = (Logger) LogManager.getLogger("WebDriverDZ");
 
     private WebDriver driver;
 
